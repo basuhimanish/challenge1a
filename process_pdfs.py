@@ -160,8 +160,8 @@ def extract_title_and_headings(pdf_path):
     }
 
 def main():
-    input_dir = "/app/input"
-    output_dir = "/app/output"
+    input_dir = r"C:\\Users\\haris\\Downloads\\local\\local\\app\\input"
+    output_dir = r"C:\\Users\\haris\\Downloads\\local\\local\\app\\output"
     os.makedirs(output_dir, exist_ok=True)
 
     for filename in os.listdir(input_dir):
@@ -181,7 +181,7 @@ def main():
             except Exception as e:
                 logging.error(f"Failed to write JSON for {pdf_path}: {e}")
 
-if __name__ == "__main__":
+if _name_ == "_main_":
     logging.info("Starting processing pdfs")
     main()
     logging.info("Completed processing pdfs")
