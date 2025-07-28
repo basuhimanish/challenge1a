@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY process_pdfs.py .
 
-RUN pip install --no-cache-dir PyMuPDF langdetect
+RUN pip install --no-cache-dir PyMuPDF langdetect python-bidi
 
 CMD ["python", "process_pdfs.py"]
